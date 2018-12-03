@@ -6,8 +6,7 @@ find_package(Glog REQUIRED)
 include_directories(${GLOG_INCLUDE_DIR})
 
 include_directories(include)
-
-SET(LIBRARIES_PATH /home/julian/WORK_0925_1200/Sensor_UI_Test/lib)
+SET(LIBRARIES_PATH ${CMAKE_CURRENT_LIST_DIR}/lib)
 
 find_library(LIBOPENCV_CORE opencv_core
     PATHS ${LIBRARIES_PATH})

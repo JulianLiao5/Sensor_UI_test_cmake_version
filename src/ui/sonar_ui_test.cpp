@@ -90,8 +90,8 @@ int main(int argc, char *argv[]) {
         #if DEBUG
         printf("j: %d, FB[left_front] object distance: %f, FC[right_front] object distance: %f\n", j, sonarObjs[j].left_front / 1000.0f, sonarObjs[j].right_front / 1000.0f);
         #endif
-        OGM->DrawRectInMap(Rect(sonarObjs[j].left_front / 1000.0f, 1.0, 0.2, 0.07));
-        OGM->DrawRectInMap(Rect(sonarObjs[j].right_front / 1000.0f, -1.0, 0.2, 0.07));
+        OGM->DrawRectInMap(Rect(sonarObjs[j].rightside_front / 1000.0f, 1.0, 0.2, 0.07));
+        OGM->DrawRectInMap(Rect(sonarObjs[j].rightside_rear / 1000.0f, -1.0, 0.2, 0.07));
     }
 
     cv::Mat m = OGM->Visualize();
