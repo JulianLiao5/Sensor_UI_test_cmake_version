@@ -14,7 +14,8 @@ namespace PIAUTO {
     namespace chassis {
 
         #define USRADAR_NUM    8
-        #define DEFAULT_SONAR_BUFFER_SIZE    10    // 10 means 10 * 100ms = 1000ms
+        #define DEFAULT_SONAR_BUFFER_SIZE    1    // 10 means 10 * 100ms = 1000ms, that is every can sonar frame can stay in the #CircleBuffer for 1 second.
+                                                  // 1 means, every single time, the user get the newest sonar object.
         #define TIME_INTERVAL_800 150
         #define DEBUG_SONAR false
 

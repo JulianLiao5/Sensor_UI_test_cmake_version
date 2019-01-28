@@ -88,7 +88,7 @@ int main(int argc, char *argv[]) {
     sonar->GetObjectInfoByTimes(sonarObjs, DEFAULT_SONAR_BUFFER_SIZE);
     for (int j = 0; j != DEFAULT_SONAR_BUFFER_SIZE; ++j) {
         #if DEBUG
-        printf("j: %d, FB[left_front] object distance: %f, FC[right_front] object distance: %f\n", j, sonarObjs[j].left_front / 1000.0f, sonarObjs[j].right_front / 1000.0f);
+        printf("j: %d, FB[left_front] object distance: %f, FC[right_front] object distance: %f\n", j, sonarObjs[j].rightside_front / 1000.0f, sonarObjs[j].rightside_rear / 1000.0f);
         #endif
         OGM->DrawRectInMap(Rect(sonarObjs[j].rightside_front / 1000.0f, 1.0, 0.2, 0.07));
         OGM->DrawRectInMap(Rect(sonarObjs[j].rightside_rear / 1000.0f, -1.0, 0.2, 0.07));
